@@ -1,5 +1,7 @@
 # Meta XR Platform SDK fix for the Linux Unity Editor
 
+> **Credits:** This tool was designed and written by **Claude** (Anthropic's AI model) using [Claude Code](https://claude.com/claude-code). [@kade276333](https://github.com/kade276333) requested it, tested it on their own setup, and published it here.
+
 What it does: Meta's Platform SDK only ships a Windows DLL, so on Linux Unity throws
 DllNotFoundException (ovrplatform / LibOVRPlatformImpl64_1) in Play mode. This installs a
 small Linux library that forwards those calls to Meta's real DLL running under Wine.
@@ -30,3 +32,7 @@ Env vars: OVRPLATFORM_WINE=/path/to/wine   OVRPLATFORM_LINUX_DEBUG=1   OVRPLATFO
 Tip: open your project in Unity once before installing, so the SDK package is in
 Library/PackageCache and the bridge gets built for your exact SDK version. If you update
 the Meta SDK later, run ./install.sh again.
+
+## Credits
+
+Written by Claude (Anthropic) with Claude Code, at the request of kade276333, who tested and published it. Not affiliated with or endorsed by Meta, Unity, or Valve.
